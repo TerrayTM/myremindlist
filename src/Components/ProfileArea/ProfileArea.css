@@ -1,0 +1,95 @@
+.ProfileArea {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    align-items: center;
+    padding: 32px;
+    background-color: #1B95E0;
+    color: #e9f4fc;
+}
+
+.ProfileArea > div:first-child {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.ProfileArea h1, 
+.ProfileArea h4 {
+    margin: 0;
+}
+
+.ProfileArea h1 {
+    margin-bottom: 12px;
+}
+
+.Profile {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 12px solid cyan;
+    color: cyan;
+    margin-right: 0;
+    text-align: center;
+    font-size: 150px;
+    font-family: "sans-serif";
+    font-weight: bold;
+    overflow: hidden;
+    user-select: none;
+    cursor: default;
+    background-color: inherit;
+    transition: background-color 1.0s;
+    margin-bottom: 20px;
+}
+
+.Profile:hover {
+    background-color: #7035df;
+}
+
+.CreateButton {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.CreateButton p {
+    margin: 8px 0 0 0;
+}
+
+.Text {
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+    .ProfileArea {
+        flex-flow: row;
+    }
+
+    .ProfileArea > div:first-child {
+        flex-flow: row;
+    }
+
+    .Profile {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .Text {
+        text-align: left;
+    }
+
+    .CreateButton {
+        margin-top: 0;
+    }
+}
+
+.AddNumber {
+    color: #6700bb;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.NotVerified {
+    cursor: pointer;
+    color: black;
+}

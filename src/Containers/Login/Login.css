@@ -1,0 +1,22 @@
+.Login {
+    margin: 128px auto;
+    max-width: 460px;
+    width: 70%;
+    border: 1px solid #ccc;
+    padding: 30px 35px 35px 35px;
+    box-shadow: 0 0 4px #ccc;
+}
+
+.Login a {
+    text-decoration: none;
+    opacity: 0.6;
+    color: #6262fd;
+    transition: opacity 0.3s ease-in-out;
+    margin-top: 12px;
+    display: block;
+    text-align: center;
+}
+
+.Login a:hover {
+    opacity: 1.0;
+}

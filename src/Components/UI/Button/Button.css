@@ -1,0 +1,78 @@
+.Button {
+    padding: 10px;
+    background-color: green;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    opacity: 1.0;
+    color: aliceblue;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+}
+
+.Button:disabled {
+    opacity: 0.6;
+    background-color: gray;
+    cursor: default;
+}
+
+.SignupButton {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #188fff;
+    margin: auto;
+    width: 260px;
+}
+
+.SignupButton:hover {
+    background-color: #369dfd;
+}
+
+.Delete {
+    border-radius: 0 0 5px 0;
+    background-color: #f04141;
+    opacity: 0.8;
+}
+
+.Delete:hover,
+.Menu:hover {
+    opacity: 1.0;
+}
+
+.Menu,
+.MenuClose {
+    width: 42px;
+    height: 40px;
+    font-size: 24px;
+    padding: 0;
+    font-weight: bold;
+    background-color: #3c3cfd;
+    opacity: 0.8;
+}
+
+.MenuClose {
+    background-color: red;
+}
+
+.Create {
+    width: 90px;
+    font-weight: bold;
+    font-size: 50px;
+    border-radius: 50%;
+}
+
+.Create:hover {
+    background-color: #289128;
+}
+
+.Donate {
+    margin-top: 32px;
+    font-size: 18px;
+    padding: 18px;
+}
+
+.Donate:hover {
+    background-color: #1cad1c;
+}

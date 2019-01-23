@@ -1,0 +1,19 @@
+.Feature {
+    box-sizing: border-box;
+    text-align: center;
+    width: 33.3%;
+}
+
+.Feature p {
+    margin: 0;
+}
+
+.Feature h3 {
+    margin-top: 8px;
+    margin-bottom: 4;
+}
+
+.Feature img {
+    width: 56px;
+    height: 56px;
+}

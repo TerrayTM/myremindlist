@@ -1,0 +1,29 @@
+.TextArea {
+    padding: 64px 0;
+}
+
+.TextArea > div {
+    margin: auto;
+    width: 70%;
+    max-width: 800px;
+}
+
+.TextArea p {
+    text-align: justify;
+    line-height: 32px;
+}
+
+.TextArea span {
+    background-color: #009b00;
+    padding: 4px 6px;
+    border-radius: 4px;
+    color: aliceblue;
+}
+
+.TextArea a {
+    text-decoration: none;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: #5c5cff;
+    color: aliceblue;
+}

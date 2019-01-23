@@ -1,0 +1,52 @@
+.Dialog {
+    z-index: 100;
+    position: absolute;
+    top: -500px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 74px 28px 30px 28px;
+    box-sizing: border-box;
+    max-width: 500px;
+    width: 80%;
+    border-radius: 6px;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 3px #ccc;
+    visibility: hidden;
+    transition: top 0.3s, visibility 0.3s;
+}
+
+.Header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    background-color: #d1d1d1;
+    padding: 12px 28px;
+    box-sizing: border-box;
+    border-radius: 6px 6px 0 0;
+}
+
+.Header h3 {
+    margin: 0; 
+}
+
+.Cancel {
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Show {
+    top: 120px;
+    visibility: visible;
+}
+
+.PlaceHolder {
+    font-size: 26px;
+    font-weight: bold;
+    opacity: 0;
+    cursor: default;
+}

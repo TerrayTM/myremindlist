@@ -1,0 +1,20 @@
+.ErrorHandler {
+    background-color: #F2DEDE;
+    color: #A94442;
+    border: solid 1px #EBCCD1;
+    border-radius: 4px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ErrorHandler p {
+    margin: 0;
+}
+
+.ErrorHandler > div {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}

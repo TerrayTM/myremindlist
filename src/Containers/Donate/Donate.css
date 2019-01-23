@@ -1,0 +1,30 @@
+.Donate > section:first-child {
+    padding: 64px 0;
+    background-color: #184c5c;
+    text-align: center;
+}
+
+.Donate h1 {
+    color: aliceblue;
+    font-size: 34px;
+}
+
+.Donate h2 {
+    text-align: justify;
+    font-size: 20px;
+}
+
+.TextArea {
+    padding: 32px 0;
+}
+
+.TextArea > div {
+    margin: auto;
+    width: 70%;
+    max-width: 800px;
+}
+
+.TextArea p {
+    text-align: justify;
+    line-height: 32px;
+}

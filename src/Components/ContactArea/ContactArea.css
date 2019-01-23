@@ -1,0 +1,41 @@
+.ContactArea {
+    padding: 64px 0;
+    background-color: #f7f7f7;
+}
+
+.ContactArea > div {
+    margin: auto;
+    width: 70%;
+    max-width: 800px;
+}
+
+.ContactArea h2 {
+    margin-top: 0;
+}
+
+.Success {
+    padding: 64px 0;
+    max-width: 440px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 700px) {
+    .Success {
+        flex-flow: row;
+    }
+}
+
+.Success img {
+    width: 140px;
+    cursor: pointer;
+}
+
+.Success p {
+    line-height: 32px;
+    width: 280px;
+    text-align: justify;
+}

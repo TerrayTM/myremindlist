@@ -1,0 +1,20 @@
+.Footer {
+    margin-top: auto;
+    padding: 10px 20px;
+    background: darkslategray;
+    text-align: center;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Footer a {
+    text-decoration: none;
+    color: #aad7ff;
+    transition: color 0.3s;
+}
+
+.Footer a:hover {
+    color: #6eb8f8;
+}

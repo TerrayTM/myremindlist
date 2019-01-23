@@ -1,0 +1,32 @@
+.FeatureArea {
+    padding: 26px 0 40px 0;
+    border-bottom: 1px solid #daeaff;
+    background-color: #F4F7FB;
+}
+
+.FeatureArea > div {
+    width: 80%;
+    max-width: 1200px;;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin: auto;
+}
+
+.FeatureArea > div > div {
+    margin-bottom: 54px;
+}
+
+.FeatureArea > div > div:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 700px) {
+    .FeatureArea > div {
+        flex-flow: row;
+    }
+
+    .FeatureArea > div > div {
+        margin-bottom: 0;
+    }
+}
