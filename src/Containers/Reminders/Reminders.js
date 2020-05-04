@@ -15,7 +15,7 @@ class Reminders extends Component {
 
     componentDidMount() {
         if (!this.props.token && !localStorage.getItem('token')) {
-            this.props.history.push('/');
+           this.props.history.push('/');
         }
     }
 
@@ -182,6 +182,13 @@ class Reminders extends Component {
     }
 
     showAddNumberDialogHandler = () => {
+        const value = 1;
+
+        //Disable adding phone number
+        if (value === 1) {
+            return;
+        }
+
         this.setState({ dialog: 3 });
     }
 
@@ -209,7 +216,8 @@ class Reminders extends Component {
 
         if (!this.props.firstName) {
             body = <Spinner/>;
-        } else {
+        } 
+        else {
             body = (
                 <Fragment>
                     <ProfileArea 

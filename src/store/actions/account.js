@@ -1,7 +1,8 @@
 import * as actionTypes from './actionTypes';
+import { api } from '../../config';
 
 export const accountLogin = (email, password) => {
-    return dispatch => {
+    return (dispatch) => {
         dispatch(accountLoginBegin());
         const content = {
             method: 'post',
@@ -13,8 +14,8 @@ export const accountLogin = (email, password) => {
                 email,
                 password
             })
-        }
-        fetch('***', content).then(response => {
+        };
+        fetch(api, content).then(response => {
             if (response.status === 200) {
                 return response.json()
             }
@@ -81,7 +82,7 @@ export const createAccount = (email, password, firstName, lastName) => {
                 lastName
             })
         }
-        fetch('***', content).then(response => {
+        fetch(api, content).then(response => {
             if (response.status === 200) {
                 return response.json();
             }
@@ -124,12 +125,12 @@ export const createAccountSuccess = (token, email, firstName, lastName, verifyEm
 
 export const tryAutoLogin = () => {
     return dispatch => {
-        let token = localStorage.getItem('token'),
-            expiry = localStorage.getItem('expiry');
+        let token = localStorage.getItem('token');
+        let expiry = localStorage.getItem('expiry');
 
         if (token && expiry) {
             if (new Date(expiry) > new Date()) {
-                fetch('***?token=' + token).then(response => {
+                fetch(`${api}?token=${token}`).then(response => {
                     if (response.status === 200) {
                         return response.json();
                     }
@@ -139,7 +140,8 @@ export const tryAutoLogin = () => {
                 }).then(response => {
                     if (response.error) {
                         dispatch(accountLogout());
-                    } else {
+                    } 
+                    else {
                         expiry = (new Date(expiry).getTime() - new Date().getTime()) / 1000;
                         dispatch(accountLoginSuccess(token, response.firstName, response.lastName, response.email, response.phone, response.reminds, response.verifyEmail, response.verifyPhone));
                         dispatch(autoLogout(expiry));
@@ -147,7 +149,8 @@ export const tryAutoLogin = () => {
                 }).catch(error => {
                     dispatch(accountLogout());
                 });
-            } else {
+            } 
+            else {
                 dispatch(accountLogout());
             }
         }
@@ -174,7 +177,7 @@ export const deleteRemind = (id, token) => {
                 id
             })
         }
-        fetch('***', content).then(response => {
+        fetch(api, content).then(response => {
             if (response.status === 200) {
                 return response.json();
             }
@@ -217,7 +220,7 @@ export const createRemind = (token, message, time, params) => {
                 params
             })
         }
-        fetch('***', content).then(response => {
+        fetch(api, content).then(response => {
             if (response.status === 200) {
                 return response.json();
             }
@@ -297,7 +300,7 @@ export const verify = (token, code, verifyType) => {
                 code
             })
         }
-        fetch('***', content).then(response => {
+        fetch(api, content).then(response => {
             if (response.status === 200) {
                 return response.json();
             }
@@ -338,7 +341,7 @@ export const addPhone = (token, phone) => {
                 phone
             })
         }
-        fetch('***', content).then(response => {
+        fetch(api, content).then(response => {
             if (response.status === 200) {
                 return response.json();
             }

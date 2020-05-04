@@ -24,7 +24,7 @@ const profileArea = (props) => {
                 <div className={classes.Text}>
                     <h1>Welcome {props.firstName + ' ' + props.lastName}!</h1>
                     <h4>Email: <Fragment>{props.email}{emailAppend}</Fragment></h4>
-                    <h4>Phone: {props.phone ? <Fragment>{props.phone}{phoneAppend}</Fragment> : <span className={classes.AddNumber} onClick={props.addNumber}>Add Phone Number</span>}</h4>
+                    <h4>Phone: {props.phone ? <Fragment>{props.phone}{phoneAppend}</Fragment> : <span className={classes.AddNumber} onClick={props.addNumber}>SMS Feature Disabled</span>}</h4>
                 </div>
             </div>
             <div className={classes.CreateButton}>

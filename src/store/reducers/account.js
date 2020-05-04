@@ -7,7 +7,7 @@ const apply = (state, newState) => {
     };
 }
 
-const initalState = {
+const initialState = {
     token: null,
     firstName: null,
     lastName: null,
@@ -32,11 +32,11 @@ const deleteRemind = (state, id) => {
     return apply(state, { reminds: copy, complete: true, loading: false, error: null });
 }
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.ACCOUNT_LOGIN: return apply(state, { loading: true, error: null });
         case actionTypes.ACCOUNT_LOGIN_SUCCESS: return apply(state, { loading: false, error: null, token: action.token, email: action.email, phone: action.phone, firstName: action.firstName, lastName: action.lastName, reminds: action.reminds, verifyEmail: action.verifyEmail, verifyPhone: action.verifyPhone });
-        case actionTypes.ACCOUNT_LOGOUT: return initalState;
+        case actionTypes.ACCOUNT_LOGOUT: return initialState;
         case actionTypes.CREATE_ACCOUNT: return apply(state, { loading: true, error: null });
         case actionTypes.CREATE_ACCOUNT_SUCCESS: return apply(state, { loading: false, error: null, token: action.token, email: action.email, firstName: action.firstName, lastName: action.lastName, verifyEmail: action.verifyEmail, verifyPhone: action.verifyPhone });
         case actionTypes.DELETE_REMIND: return apply(state, { loading: true, error: null });

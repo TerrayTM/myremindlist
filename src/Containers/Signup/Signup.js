@@ -93,7 +93,8 @@ class Signup extends Component {
         
         if (this.props.loading) {
             formArea = <Spinner/>;
-        } else {
+        } 
+        else {
             formArea = (
                 <Fragment>
                     <ErrorHandler error={this.props.error} resetError={this.props.onResetError}/>

@@ -20,14 +20,15 @@ class Home extends Component {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
+                'API-Route': 'Message'
             },
             body: JSON.stringify({
                 name: data.name,
                 email: data.email,
-                message: data.message,
+                message: `[MyRemindList]: ${data.message}`
             })
         }
-        fetch('***', content).then(response => {
+        fetch('https://terrytm.com/api/wain.php', content).then(response => {
             if (response.status === 200) {
                 return response.json();
             }
